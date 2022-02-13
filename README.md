@@ -337,7 +337,7 @@ def resumen_ventas_meses(dicc_1, titulo, columnas, index):
  
 Ahora desde el archivo principal se manda a llamar la función donde se mandan los mismos parámetros excepto la columna por la cual se va ordenar, ya sea ganancia, por ventas o por promedio de ventas al mes.
  
- ``` python
+``` python
  # Ventas por mes
 resumen_ventas_meses(resumen_ventas, "Meses con mas ganancias:", ["Mes", "Ganancia", "Ventas", "Promedio de ventas al mes"], 0)
 resumen_ventas_meses(resumen_ventas, "Meses con mas ventas:", ["Mes", "Ganancia", "Ventas", "Promedio de ventas al mes"], 1)
@@ -367,5 +367,20 @@ while True:
     else:
       mensaje = f"Usuario o Password incorrectos, intente de nuevo\nIntentos restantes: {intentos}"
   ```
-  
-  ## RESULTADOS
+***
+## RESULTADOS
+
+```
+**********Bienvenido al sistema de informacion de ventas de LifeStore**********
+Por favor ingrese su usario y contraseña
+
+
+Usuario: emtech2022
+
+Password: proyecTO-01
+Login exitoso, accediendo....
+``` 
+***
+
+## CONCLUSIÓN
+Se notó que existe una gran parte del inventario que no ha tenido ninguna venta y ni una búsqueda, por ello se le recomienda a la tienda LifeStore que esos productos sean vendidos con algún descuento o promoción con el fin de que salgan del inventario y se tenga más inventario de los productos más vendidos.
