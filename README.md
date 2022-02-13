@@ -3,7 +3,7 @@
 
 Elaborado por: Jesus Omar Magaña Medina
 
-Da clic aqui[https://xurl.es/448rx] para ver el reporte.
+Da clic aqui [https://xurl.es/448rx] para ver el reporte.
 
 ***
 
