@@ -38,4 +38,10 @@ Después creamos diccionarios necesarios para los posteriores cálculos, estos s
 * id_sin_busquedas: Un diccionario que guarda como llave los ID de los productos que no han sido buscados ninguna vez y su valor es una lista que almacena el nombre y categoría del producto además de que se agrega un 0 indicando que no ha tenido ninguna búsqueda.
 * categorías: Una lista con todas las categorías de los productos, primero se extraen todas las categorías encontradas en la lista lifestore_products, después se usa la función set para tener valores únicos.
 
-
+``` python
+id_sin_ventas = {id[0]:[id[1], id[3], 0] for id in lifestore_products if id[0] not in id_ventas} # Se crear un diccionario con ID del producto como llave el nombre, 
+                                                                                                 # categoria y 0 de los productos no vendidos.
+id_sin_busquedas = {id[0]:[id[1], id[3], 0] for id in lifestore_products if id[0] not in id_busquedas} # Se crear un diccionario con ID del producto como llave el nombre, 
+                                                                                                       # categoria y 0 de los productos no buscados.
+categorias = set([categoria[3] for categoria in lifestore_products]) # Se crear una lista con las categorias de los productos
+``` 
