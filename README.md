@@ -45,3 +45,13 @@ id_sin_busquedas = {id[0]:[id[1], id[3], 0] for id in lifestore_products if id[0
                                                                                                        # categoria y 0 de los productos no buscados.
 categorias = set([categoria[3] for categoria in lifestore_products]) # Se crear una lista con las categorias de los productos
 ``` 
+
+
+### PRODUCTOS MÁS VENDIDOS
+#### PRODUCTOS MÁS VENDIDOS Y BUSCADOS
+Para el primer punto que es generar un listado de los 5 productos con mayores ventas y una con los 10 productos con mayores búsquedas se realizó una función llamada contabilizar_ventas_busquedas que contabiliza el mayor número de ventas o búsquedas por ID, se calcula búsquedas o ventas dependiendo de la lista pasada por parámetro(id_ventas, id_busquedas), recibe por parámetro  las siguientes variables:
+•	top(int): Indica resultados se van a imprimir en pantalla.
+•	lista_id(list): Puede contener los ID de los productos que se encuentran en la lista lifestore_sales o los ID de la lista lifestore_searches.
+•	titulo(string): Es el título que se va a imprimir de los resultados.
+•	columnas(list): Son el nombre de las columnas de cada resultado.
+Lo primero que hace es crear un diccionario con ID del producto como llave y como valor el número de veces que se vendió ese producto, esto se hace con ayuda de las funciones map, zip, count y dict, el resultado es guardado en id_contabilizados, luego es ordenado por los valores del diccionario ósea el número de ventas, esta es hecho por la función sorted, el diccionario resultante es guardado en resultado, después se crear un diccionario con ayuda de comprensión de diccionarios donde la llave es el ID del producto y de valor una lista con el nombre, la categoría y el número de ventas del producto. Se imprime los resultados, se imprime solamente los primeros top productos, recordando que top es una variable. Por último se regresa el diccionario con la información de los productos vendidos o buscados según sea el caso.
