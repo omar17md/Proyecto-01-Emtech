@@ -34,11 +34,11 @@ while True:
 id_ventas, id_busquedas = extraccion_id(lifestore_sales, lifestore_searches) # Se extraen los ID que aparecen en las listas
                                                                              # lifestore_sales y lifestore_searches
 
-id_sin_ventas = {id[0]:[id[1], id[3], 0] for id in lifestore_products if id[0] not in id_ventas} # Se crear un diccionario con ID del producto como llave el nombre, 
+id_sin_ventas = {id[0]:[id[1], id[3], 0] for id in lifestore_products if id[0] not in id_ventas} # Se crea un diccionario con ID del producto como llave el nombre, 
                                                                                                  # categoria y 0 de los productos no vendidos.
-id_sin_busquedas = {id[0]:[id[1], id[3], 0] for id in lifestore_products if id[0] not in id_busquedas} # Se crear un diccionario con ID del producto como llave el nombre, 
+id_sin_busquedas = {id[0]:[id[1], id[3], 0] for id in lifestore_products if id[0] not in id_busquedas} # Se crea un diccionario con ID del producto como llave el nombre, 
                                                                                                        # categoria y 0 de los productos no buscados.
-categorias = set([categoria[3] for categoria in lifestore_products]) # Se crear una lista con las categorias de los productos
+categorias = set([categoria[3] for categoria in lifestore_products]) # Se crea una lista con las categorias de los productos
 
 ###################### PUNTO 1 Productos más vendidos y productos rezagados.
 print(f"{'-'* 25}Productos mas vendidos y buscados{'-'* 25}\n")
