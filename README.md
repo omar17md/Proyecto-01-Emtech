@@ -33,8 +33,8 @@ def extraccion_id(lista_1, lsita_2):
   return [id[1] for id in lista_1 if id[4] == 0], [id[1] for id in lsita_2]
  ```
  
- Después creamos diccionarios necesarios para los posteriores cálculos, estos son los siguientes:
-* id_sin_ventas: Un diccionario que guarda como llave los ID de los productos que no han tenido ninguna venta y su valor es una lista que almacena el nombre y categoría del producto además de que se agrega un 0 indicando que no tuvo ninguna venta.
-* id_sin_busquedas: Un diccionario que guarda como llave los ID de los productos que no han sido buscados ninguna vez y su valor es una lista que almacena el nombre y * categoría del producto además de que se agrega un 0 indicando que no ha tenido ninguna búsqueda.
-* categorías: Una lista con todas las categorías de los productos, primero se extraen todas las categorías encontradas en la lista lifestore_products, después se usa la función set para tener valores únicos.
+Después creamos diccionarios necesarios para los posteriores cálculos, estos son los siguientes:
+ * id_sin_ventas: Un diccionario que guarda como llave los ID de los productos que no han tenido ninguna venta y su valor es una lista que almacena el nombre y categoría del producto además de que se agrega un 0 indicando que no tuvo ninguna venta.
+ * id_sin_busquedas: Un diccionario que guarda como llave los ID de los productos que no han sido buscados ninguna vez y su valor es una lista que almacena el nombre y * categoría del producto además de que se agrega un 0 indicando que no ha tenido ninguna búsqueda.
+ * categorías: Una lista con todas las categorías de los productos, primero se extraen todas las categorías encontradas en la lista lifestore_products, después se usa la función set para tener valores únicos.
 
