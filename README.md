@@ -21,4 +21,20 @@ Las siguientes variables son usadas para calcular los diferentes puntos solicita
 ``` python
 id_ventas, id_busquedas = extraccion_id(lifestore_sales, lifestore_searches)
 ```
-----
+
+Como notaremos la anterior línea manda llamar a la función extracción_id que recibe como parámetro las listas lifestore_sales y lifestore_searches. 
+
+Esta función recibe como parámetro las dos listas mencionadas anteriormente guardadas en las variables lista_1 y lista_2 respectivamente, la función extrae los ID de los productos de ambas listas, para ello se usó comprensión de listas, la primera comprensión regresa una lista con los ID de los productos vendidos siempre y cuando en esa venta no se devolvió el producto, la otra lista retornada regresa los ID de los productos buscados.
+
+``` python
+def extraccion_id(lista_1, lsita_2):
+  """Extrae los ID de las listas lifestore_sales y lifestore_searches
+  """
+  return [id[1] for id in lista_1 if id[4] == 0], [id[1] for id in lsita_2]
+ ```
+ 
+ Después creamos diccionarios necesarios para los posteriores cálculos, estos son los siguientes:
+* id_sin_ventas: Un diccionario que guarda como llave los ID de los productos que no han tenido ninguna venta y su valor es una lista que almacena el nombre y categoría del producto además de que se agrega un 0 indicando que no tuvo ninguna venta.
+* id_sin_busquedas: Un diccionario que guarda como llave los ID de los productos que no han sido buscados ninguna vez y su valor es una lista que almacena el nombre y * categoría del producto además de que se agrega un 0 indicando que no ha tenido ninguna búsqueda.
+* categorías: Una lista con todas las categorías de los productos, primero se extraen todas las categorías encontradas en la lista lifestore_products, después se usa la función set para tener valores únicos.
+
