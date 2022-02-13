@@ -15,3 +15,5 @@ El código se divide en tres archivos,  PROYECTO-01-Magaña-Medina-Jesus-Omar.py
 
 ### Variables base
 Las siguientes variables son usadas para calcular los diferentes puntos solicitados, estas variables son las siguientes:
+*id_ventas: Una lista que guarda los ID de los productos que fueron vendidos (no cuentan las devueltos).
+*id_busquedas: Una lista que guarda los ID de los productos que fueron buscados.
