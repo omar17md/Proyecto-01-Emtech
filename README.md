@@ -21,3 +21,4 @@ Las siguientes variables son usadas para calcular los diferentes puntos solicita
 ``` python
 id_ventas, id_busquedas = extraccion_id(lifestore_sales, lifestore_searches)
 ```
+----
