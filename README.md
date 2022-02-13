@@ -18,6 +18,6 @@ Las siguientes variables son usadas para calcular los diferentes puntos solicita
   * id_ventas: Una lista que guarda los ID de los productos que fueron vendidos (no cuentan las devueltos).
   * id_busquedas: Una lista que guarda los ID de los productos que fueron buscados.
 
-```
+``` python
 id_ventas, id_busquedas = extraccion_id(lifestore_sales, lifestore_searches)
 ```
